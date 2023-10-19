@@ -3,6 +3,7 @@ import { StyleSheet, Text, View } from "react-native";
 import Home from "./screens/home";
 import * as Font from "expo-font";
 import AppLoading from 'expo-app-loading';
+import { globalStyles } from "./styles/globalStyle";
 
 const getFonts = () =>
   Font.loadAsync({
@@ -14,7 +15,7 @@ export default function App() {
 
   if (fontsLoaded) {
     return (
-      <View style={styles.container}>
+      <View style={globalStyles.container}>
         <Home />
       </View>
     );
@@ -26,8 +27,8 @@ export default function App() {
 }
 
 const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: "#fff",
-  },
+  // container: {
+  //   flex: 1,
+  //   backgroundColor: "#fff",
+  // },
 });
